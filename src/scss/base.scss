@@ -5,3 +5,14 @@ a{
   text-decoration: none;
   color:#000;
 }
+.btn{
+  @include normal15;
+  cursor: pointer;
+}
+
+.btn-white{
+  color:#010101;
+  background-color: #ffffff;
+  border:none;
+  padding: 20px 28px;
+}

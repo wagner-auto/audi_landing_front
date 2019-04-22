@@ -6,3 +6,13 @@
   font-family: AudiTNormal;
   font-size: 16px;
 }
+
+@mixin normal15{
+  font-family: AudiTNormal;
+  font-size: 15px;
+}
+
+@mixin extbold56{
+  font-family: AudiTEBold;
+  font-size: 56px;
+}

@@ -1,0 +1,24 @@
+.banner__content{
+  position: relative;
+  .banner__img{
+    width: 100%;
+  }
+}
+.banner__disclaimer{
+  position: absolute;
+  top:60px;
+  left: 60px;
+  max-width: 50%;
+}
+.banner__disclaimer-rings{
+  min-width: 150px;
+}
+.banner__disclaimer-text{
+  @include extbold56;
+  color: #fff;
+}
+.banner__btn{
+  position: absolute;
+  bottom: 45px;
+  left: 60px;
+}

@@ -1,4 +1,14 @@
-<%= _.template(require('./../includes/head.html'))(data) %>
-<%= _.template(require('./../includes/script.html'))(data) %>
+<%= _.template(require('./../includes/head.html'))({}) %>
+<section class="banner">
+    <div class="banner__content">
+        <img src="/img/banner1.png" class="banner__img"/>
+        <div class="banner__disclaimer">
+            <img src="/img/rings_wh.png" class="banner__disclaimer-rings"/>
+            <h1 class="banner__disclaimer-text">Безупречные условия на покупку Audi</h1>
+        </div>
+        <button class="btn btn-white banner__btn">Получить спецпредложение</button>
+    </div>
+</section>
+<%= _.template(require('./../includes/script.html'))({}) %>
 </body>
 </html>
