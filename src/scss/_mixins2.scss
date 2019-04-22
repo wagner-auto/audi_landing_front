@@ -26,7 +26,9 @@
 @mixin normal21{
   @include customNormal(21);
 }
-
+/**
+ * ExtNormal
+ */
 @mixin extnormal30{
   @include customExtNormal(30);
 }
