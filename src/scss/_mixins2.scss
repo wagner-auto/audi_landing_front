@@ -1,18 +1,47 @@
-@mixin normal12{
+@mixin customNormal($size){
   font-family: AudiTNormal;
-  font-size: 12px;
+  font-size: $size+px;
+}
+@mixin customExtBold($size){
+  font-family: AudiTEBold;
+  font-size: $size+px;
+}
+@mixin customExtNormal($size){
+  font-family: AudiTENormal;
+  font-size: $size+px;
+}
+/**
+  NORMAL
+ */
+@mixin normal12{
+  @include customNormal(12);
 }
 @mixin normal16{
-  font-family: AudiTNormal;
-  font-size: 16px;
+  @include customNormal(16);
 }
 
 @mixin normal15{
-  font-family: AudiTNormal;
-  font-size: 15px;
+  @include customNormal(15);
+}
+@mixin normal21{
+  @include customNormal(21);
 }
 
+@mixin extnormal30{
+  @include customExtNormal(30);
+}
+/**
+  BOLD
+ */
 @mixin extbold56{
-  font-family: AudiTEBold;
-  font-size: 56px;
+  @include customExtBold(56);
+}
+@mixin extbold30{
+  @include customExtBold(30);
+}
+@mixin extbold48{
+  @include customExtBold(48);
+}
+@mixin extbold24{
+  @include customExtBold(24);
 }

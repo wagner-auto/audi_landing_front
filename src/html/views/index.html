@@ -9,6 +9,50 @@
         <button class="btn btn-white banner__btn">Получить спецпредложение</button>
     </div>
 </section>
+<section class="cars_in_stock">
+    <div class="cars_in_stock__header">
+        <h2 class="cars_in_stock__head">В салоне Audi Центр Выборгский:</h2>
+    </div>
+    <div class="cars_in_stock__bottom">
+        <div>
+            <img src="/img/car_search.png" class="cars_in_stock__img"/>
+        </div>
+        <div>
+            <span class="cars_in_stock__count">36</span>
+        </div>
+        <div>
+            <span class="cars_in_stock__text">автомобилей в наличии</span>
+        </div>
+    </div>
+</section>
+<section class="special_block gray_block">
+    <div class="main__container">
+        <div class="row">
+            <div class="col-xl-7">
+                <h3 class="special_block__head">Эксклюзивное предложение недели</h3>
+                <span class="special_block__text">Специальное ценовое предложение, только неделю! Партия автомобилей ограниченная!</span>
+            </div>
+            <div class="col-xl-5 timer_container">
+                <div class="special_block__timer_text">
+                    Предложение действует ещё:
+                </div>
+                <div class="timer_wrapper">
+                    <div class="timer__item d">
+
+                    </div>
+                    <div class="timer__item h">
+
+                    </div>
+                    <div class="timer__hidden none">
+                        <time class="start" datetime="2019-04-10 00:00"></time>
+                        <time class="end" datetime="2019-04-30 19:00"></time>
+                        <meta format="dh"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <%= _.template(require('./../includes/script.html'))({}) %>
 </body>
 </html>

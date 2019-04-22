@@ -1,0 +1,21 @@
+.timer_wrapper{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.timer_container{
+  background-color: #000000;
+  display: flex;
+  &>div{
+    flex-basis: 50%;
+  }
+}
+text.time{
+  @include extnormal30;
+  fill:#fff;
+}
+text.text{
+  @include normal16;
+  fill:#fff;
+}

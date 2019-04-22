@@ -1,24 +1,87 @@
-.banner__content{
+/**
+ * Баннер
+ */
+.banner__content {
   position: relative;
-  .banner__img{
+
+  .banner__img {
     width: 100%;
   }
 }
-.banner__disclaimer{
+
+.banner__disclaimer {
   position: absolute;
-  top:60px;
+  top: 60px;
   left: 60px;
   max-width: 50%;
 }
-.banner__disclaimer-rings{
+
+.banner__disclaimer-rings {
   min-width: 150px;
 }
-.banner__disclaimer-text{
+
+.banner__disclaimer-text {
   @include extbold56;
   color: #fff;
 }
-.banner__btn{
+
+.banner__btn {
   position: absolute;
   bottom: 45px;
   left: 60px;
+}
+
+/**
+ * Автомобили в наличии
+ */
+.cars_in_stock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 66px 0;
+}
+.cars_in_stock__bottom{
+  display: flex;
+  flex-direction: row;
+  width: 25%;
+  justify-content: center;
+  align-items: center;
+  div:not(:last-child){
+    margin-right: 15px;
+  }
+  div:last-child{
+    max-width: 200px;
+  }
+}
+.cars_in_stock__img{
+  max-width: 73px;
+}
+.cars_in_stock__head{
+  @include extbold30;
+}
+.cars_in_stock__count{
+  @include extbold48;
+}
+.cars_in_stock__text{
+  @include normal21;
+}
+
+/**
+ * Специальное предложение
+ */
+.gray_block{
+  background-color: $audi_second_gray;
+}
+.special_block__text{
+  @include normal16;
+}
+.special_block__head{
+  @include extbold30;
+}
+.special_block__timer_text{
+  text-align: center;
+  @include extbold24;
+  color:#fff;
+  padding: 30px 0;
 }
