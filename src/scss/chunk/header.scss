@@ -1,0 +1,42 @@
+.header{
+  padding:10px 0 13px;
+}
+.header__container{
+  padding: 0 50px;
+}
+.header__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  line-height: 1.2;
+}
+.header__icon{
+  position: relative;
+  @include normal16;
+  &::before{
+    position: absolute;
+    left: -28px;
+  }
+}
+.header__item-phone{
+  &::before{
+    content:url("/img/phone.png");
+    top:2px;
+  }
+}
+.header__item-map{
+  &::before{
+    content:url("/img/poi-small.png");
+  }
+}
+.header__small{
+  @include normal12;
+  color: $audi_gray;
+}
+.header_logo_left{
+
+}
+.header_logo_right{
+  align-items: flex-end;
+}
