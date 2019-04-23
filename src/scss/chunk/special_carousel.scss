@@ -1,0 +1,46 @@
+.special_block__carousel{
+  .carousel__item{
+    background-color: #fff;
+  }
+}
+.special_block__carousel__description,.special_block__carousel__price{
+  display: flex;
+  flex-direction: column;
+  padding: 43px;
+}
+.special_block__carousel__description{
+  justify-content: space-between;
+}
+.special_block__carousel__price{
+  justify-content: center;
+}
+
+.carousel__maker_name{
+  @include extnormal22;
+  strong{
+    @include extbold22;
+  }
+}
+.carousel__promo{
+  @include normal16;
+  .red{
+    @include extbold18;
+    color: $audi_red;
+  }
+}
+.carousel__warranty{
+  @include extbold18;
+}
+.carousel__del-price{
+  @include extnormal16;
+}
+.carousel__price{
+  color: $audi_red;
+  @include extbold30;
+  span{
+    @include extbold22;
+  }
+}
+.carousel__button{
+  width: 80%;
+}

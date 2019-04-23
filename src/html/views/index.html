@@ -52,12 +52,31 @@
             </div>
         </div>
         <div class="special_block__carousel carousel owl-carousel">
+            <% [0,1,2,3].forEach(_=>{ %>
             <div class="carousel__item">
-
+                <div class="row special_block__carousel__row">
+                    <div class="col-xl-4 special_block__carousel__img_block">
+                        <img src="/img/car_carousel.png" class="special_block__carousel-img"/>
+                    </div>
+                    <div class="col-xl-4 special_block__carousel__description">
+                        <p class="carousel__maker_name">Audi <strong>Q8 <br/> 50 TDI quattro</strong></p>
+                        <p class="carousel__promo">Бонус по программе Трейд-ин <br/><span class="red">200 000 рублей</span></p>
+                        <p class="carousel__warranty"><strong>4 года гарантии</strong></p>
+                    </div>
+                    <div class="col-xl-4 special_block__carousel__price">
+                        <p class="carousel__del-price">
+                            <del>5 690 000 рублей</del>
+                        </p>
+                        <p class="carousel__price">5 250 000 <span>рублей</span></p>
+                        <button class="btn btn-white-border carousel__button">Успей забронировать</button>
+                    </div>
+                </div>
             </div>
+            <% }) %>
         </div>
     </div>
 </section>
+<%= _.template(require('./../includes/footer.html'))({}) %>
 <%= _.template(require('./../includes/script.html'))({}) %>
 </body>
 </html>

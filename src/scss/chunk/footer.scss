@@ -1,0 +1,27 @@
+.footer__disclaimer{
+  padding: 34px 0;
+}
+.footer__disclaimer-text{
+  @include normal12;
+  color:$audi_gray;
+  max-width: 70%;
+}
+.footer__disclaimer-right{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+.btn-dislaimer{
+  padding: 17px 29px;
+  border:1px solid #000;
+}
+.footer__copyright{
+  @include normal12;
+  background-color: #000;
+  padding: 15px 0;
+}
+.footer__copyright-text{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+}
