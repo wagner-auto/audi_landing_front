@@ -91,7 +91,6 @@
 .special_block__carousel{
   margin-top: 45px;
 }
-@import "chunk/showcase";
-.showcase{
-  padding-top:47px;
-}
+@import "chunk/car/special_carousel";
+@import "chunk/car/showcase";
+@import "chunk/car/preference";

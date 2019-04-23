@@ -1,0 +1,13 @@
+.question{
+  margin-top: 70px;
+}
+.question__content{
+  margin-top:40px;
+}
+.question__left_block{
+  text-align: center;
+}
+.question__text{
+  @include normal16;
+  margin-bottom: 40px;
+}

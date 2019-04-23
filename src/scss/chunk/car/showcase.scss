@@ -1,0 +1,115 @@
+.showcase{
+  padding-top:47px;
+}
+.showcase__head-header{
+  @include extbold30;
+  margin-top: 0;
+}
+.showcase__head-text{
+  @include normal16;
+}
+
+.showcase__models{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+}
+.showcase__model-item{
+  margin-right: 24px;
+  a{
+    @include normal14;
+    color: #a1a1a1;
+    &.active{
+      color: #000000;
+      border-bottom: 2px solid black;
+    }
+  }
+}
+.showcase__cars{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.showcase__item{
+  flex-basis: 30%;
+  margin: 15px;
+  padding: 22px 28px;
+  //box-shadow: 9px 11px 3px -6px rgba(0,0,0,0.75);
+  >div{
+    margin-bottom: 10px;
+  }
+  .item__head{
+    display: flex;
+    flex-direction: row;
+  }
+  .item__head-left{
+    flex-basis: 70%;
+  }
+  .item__head-header{
+    @include extnormal22;
+    margin: 0;
+    strong{
+      @include extbold22;
+    }
+  }
+  .item__head-header-text{
+    @include extbold16;
+  }
+  .item__head_in_stock, .item__head_in_stock-text{
+    color: $audi_red;
+  }
+  .item__head-right{
+    display: flex;
+    flex-direction: row;
+    flex-basis: 30%;
+  }
+  .item__head_in_stock{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    border: 1px solid $audi_red;
+    text-align: center;
+    padding: 6px 0;
+    margin-right: 5px;
+    @include extbold19;
+  }
+  .item__head_in_stock-text{
+    word-break: break-word;
+    @include normal12;
+  }
+  .item__image{
+    width: 100%;
+    img{
+      width: 100%;
+    }
+  }
+  .showcase__item__list{
+    list-style-image: url("/img/list.png");
+    padding: 0;
+    padding-left: 15px;
+    li{
+      @include normal16;
+      line-height: 1.5;
+      strong{
+        @include extbold16;
+      }
+    }
+  }
+  .item__button{
+    .button__finnal{
+      width: 68%;
+      padding: 20px 0;
+    }
+    .button__select{
+      width: 30%;
+    }
+  }
+}
+
+@media all and (min-width: 1600px){
+  .showcase__item{
+    flex-basis: 23%;
+  }
+}

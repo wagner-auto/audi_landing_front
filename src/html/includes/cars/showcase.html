@@ -1,0 +1,59 @@
+<section class="showcase">
+    <div class="main__container">
+        <div class="row">
+            <div class="col-xl-10 showcase__head-left">
+                <h3 class="showcase__head-header">Автомобили Audi в наличии</h3>
+                <p class="showcase__head-text">Специальные условия покупки в кредит по ставке от 7%, программа
+                    лояльности «Лига привилегий Audi», 4 года гарантии</p>
+            </div>
+            <div class="col-xl-2 showcase__head-right">
+                <button class="btn btn-black">Заказать консультацию</button>
+            </div>
+        </div>
+        <div class="showcase__model_in_stock">
+            <ul class="showcase__models">
+                <li class="showcase__model-item"><a href="#" class="active">Модельный ряд</a></li>
+                <li class="showcase__model-item"><a href="#">A3</a></li>
+                <li class="showcase__model-item"><a href="#">A4</a></li>
+                <li class="showcase__model-item"><a href="#">A5</a></li>
+                <li class="showcase__model-item"><a href="#">A6</a></li>
+                <li class="showcase__model-item"><a href="#">A7</a></li>
+                <li class="showcase__model-item"><a href="#">A8</a></li>
+                <li class="showcase__model-item"><a href="#">Q5</a></li>
+                <li class="showcase__model-item"><a href="#">Q7</a></li>
+                <li class="showcase__model-item"><a href="#">Q8</a></li>
+            </ul>
+        </div>
+        <div class="showcase__cars">
+            <% [0,1,2,3,4,5,6,7,8].forEach(_=>{ %>
+            <div class="showcase__item">
+                <div class="item__head">
+                    <div class="item__head-left">
+                        <h4 class="item__head-header">Audi <strong>Q5</strong></h4>
+                        <span class="item__head-header-text">От 2 690 000 рублей</span>
+                    </div>
+                    <div class="item__head-right">
+                        <div class="item__head_in_stock"><%= Math.round(Math.random()*10)%></div>
+                        <span class="item__head_in_stock-text">а/м<br/> в наличии</span>
+                    </div>
+                </div>
+                <div class="item__image">
+                    <img src="/img/car_a8.png"/>
+                </div>
+                <div class="item__list">
+                    <ul class="showcase__item__list">
+                        <li>Бонус до <strong>240 000 рублей</strong> по программе Audimania <i class="icon icon__question"></i></li>
+                        <li>Бонус <strong>65 000 рублей</strong> по программе Трейд-ин<i class="icon icon__question"></i></li>
+                        <li>Кредитная ставка 7% <i class="icon icon__question"></i></li>
+                        <li><strong>4 года гарантии</strong></li>
+                    </ul>
+                </div>
+                <div class="item__button">
+                    <button class="btn btn-black button__finnal">Получить финальные условия</button>
+                    <button class="btn btn-white-border button__select">Выбрать</button>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</section>

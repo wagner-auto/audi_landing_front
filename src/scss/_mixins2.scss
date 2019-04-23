@@ -47,8 +47,20 @@
 /**
  * BOLD
  */
-@mixin extbold56{
-  @include customExtBold(56);
+@mixin extbold16{
+  @include customExtBold(16);
+}
+@mixin extbold18{
+  @include customExtBold(18);
+}
+@mixin extbold19{
+  @include customExtBold(19);
+}
+@mixin extbold22{
+  @include customExtBold(22);
+}
+@mixin extbold24{
+  @include customExtBold(24);
 }
 @mixin extbold30{
   @include customExtBold(30);
@@ -56,12 +68,6 @@
 @mixin extbold48{
   @include customExtBold(48);
 }
-@mixin extbold24{
-  @include customExtBold(24);
-}
-@mixin extbold22{
-  @include customExtBold(22);
-}
-@mixin extbold18{
-  @include customExtBold(18);
+@mixin extbold56{
+  @include customExtBold(56);
 }

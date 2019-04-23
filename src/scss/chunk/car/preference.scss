@@ -1,0 +1,48 @@
+.inline__header{
+  margin:60px 0;
+}
+.inline__header-h{
+  @include extbold30;
+  text-align: center;
+  margin: 0;
+}
+.preference{
+  background:url("/img/background_preference.png") center center no-repeat;
+  background-size: cover;
+  padding: 90px 0;
+}
+.preference__image{
+  text-align: center;
+}
+.preference__text-head{
+  margin-top: 0;
+  margin-bottom: 32px;
+  @include extbold30;
+  color: #fff;
+}
+.preference__icon{
+  display: block;
+  @include normal16;
+  color: #fff;
+  margin-bottom: 15px;
+  &::before{
+    display: inline-block;
+    margin-right: 10px;
+    vertical-align: text-top;
+  }
+  &.test::before{
+    content:url("/img/icon_test.png");
+  }
+  &.cafe::before{
+    content:url("/img/icon_cafe.png");
+  }
+  &.atmosphere::before{
+    content:url("/img/icon_atm.png");
+  }
+  &.child::before{
+    content:url("/img/icon_child.png");
+  }
+  &.biblio::before{
+    content:url("/img/icon_biblio.png");
+  }
+}
