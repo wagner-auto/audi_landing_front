@@ -70,6 +70,9 @@
 /**
  * Специальное предложение
  */
+.special_block{
+  padding-bottom: 36px;
+}
 .gray_block{
   background-color: $audi_second_gray;
 }
@@ -87,4 +90,8 @@
 }
 .special_block__carousel{
   margin-top: 45px;
+}
+@import "chunk/showcase";
+.showcase{
+  padding-top:47px;
 }

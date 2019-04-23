@@ -1,0 +1,25 @@
+.showcase__head-header{
+  @include extbold30;
+  margin-top: 0;
+}
+.showcase__head-text{
+  @include normal16;
+}
+
+.showcase__models{
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  padding: 20px 0;
+}
+.showcase__model-item{
+  margin-right: 24px;
+  a{
+    @include normal14;
+    color: #a1a1a1;
+    &.active{
+      color: #000000;
+      border-bottom: 2px solid black;
+    }
+  }
+}

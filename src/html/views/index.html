@@ -25,50 +25,44 @@
         </div>
     </div>
 </section>
-<section class="special_block gray_block">
+<%= _.template(require('./../includes/cars/special.html'))({}) %>
+<section class="showcase">
     <div class="main__container">
         <div class="row">
-            <div class="col-xl-7">
-                <h3 class="special_block__head">Эксклюзивное предложение недели</h3>
-                <span class="special_block__text">Специальное ценовое предложение, только неделю! Партия автомобилей ограниченная!</span>
+            <div class="col-xl-10 showcase__head-left">
+                <h3 class="showcase__head-header">Автомобили Audi в наличии</h3>
+                <p class="showcase__head-text">Специальные условия покупки в кредит по ставке от 7%, программа
+                    лояльности «Лига привилегий Audi», 4 года гарантии</p>
             </div>
-            <div class="col-xl-5 timer_container">
-                <div class="special_block__timer_text">
-                    Предложение действует ещё:
-                </div>
-                <div class="timer_wrapper">
-                    <div class="timer__item d">
-
-                    </div>
-                    <div class="timer__item h">
-
-                    </div>
-                    <div class="timer__hidden none">
-                        <time class="start" datetime="2019-04-10 00:00"></time>
-                        <time class="end" datetime="2019-04-30 19:00"></time>
-                        <meta format="dh"/>
-                    </div>
-                </div>
+            <div class="col-xl-2 showcase__head-right">
+                <button class="btn btn-black">Заказать консультацию</button>
             </div>
         </div>
-        <div class="special_block__carousel carousel owl-carousel">
-            <% [0,1,2,3].forEach(_=>{ %>
-            <div class="carousel__item">
-                <div class="row special_block__carousel__row">
-                    <div class="col-xl-4 special_block__carousel__img_block">
-                        <img src="/img/car_carousel.png" class="special_block__carousel-img"/>
+        <div class="showcase__model_in_stock">
+            <ul class="showcase__models">
+                <li class="showcase__model-item"><a href="#" class="active">Модельный ряд</a></li>
+                <li class="showcase__model-item"><a href="#">A3</a></li>
+                <li class="showcase__model-item"><a href="#">A4</a></li>
+                <li class="showcase__model-item"><a href="#">A5</a></li>
+                <li class="showcase__model-item"><a href="#">A6</a></li>
+                <li class="showcase__model-item"><a href="#">A7</a></li>
+                <li class="showcase__model-item"><a href="#">A8</a></li>
+                <li class="showcase__model-item"><a href="#">Q5</a></li>
+                <li class="showcase__model-item"><a href="#">Q7</a></li>
+                <li class="showcase__model-item"><a href="#">Q8</a></li>
+            </ul>
+        </div>
+        <div class="showcase_cars">
+            <% [0,1,2,3,4,5,6,7,8].forEach(_=>{ %>
+            <div class="showcase__item">
+                <div class="item__head">
+                    <div class="item__head-left">
+                        <h4 class="item__head-header">Audi Q5</h4>
+                        <span class="item__head-header-text">От 2 690 000 рублей</span>
                     </div>
-                    <div class="col-xl-4 special_block__carousel__description">
-                        <p class="carousel__maker_name">Audi <strong>Q8 <br/> 50 TDI quattro</strong></p>
-                        <p class="carousel__promo">Бонус по программе Трейд-ин <br/><span class="red">200 000 рублей</span></p>
-                        <p class="carousel__warranty"><strong>4 года гарантии</strong></p>
-                    </div>
-                    <div class="col-xl-4 special_block__carousel__price">
-                        <p class="carousel__del-price">
-                            <del>5 690 000 рублей</del>
-                        </p>
-                        <p class="carousel__price">5 250 000 <span>рублей</span></p>
-                        <button class="btn btn-white-border carousel__button">Успей забронировать</button>
+                    <div class="item__head-right">
+                        <div class="item__head_in_stock">3</div>
+                        <span class="item__head_in_stock-text">а/м в наличии</span>
                     </div>
                 </div>
             </div>

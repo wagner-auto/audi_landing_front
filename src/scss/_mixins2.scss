@@ -16,19 +16,25 @@
 @mixin normal12{
   @include customNormal(12);
 }
+@mixin normal14{
+  @include customNormal(15);
+}
+@mixin normal15{
+  @include customNormal(15);
+}
 @mixin normal16{
   @include customNormal(16);
 }
 
-@mixin normal15{
-  @include customNormal(15);
-}
 @mixin normal21{
   @include customNormal(21);
 }
 /**
  * ExtNormal
  */
+@mixin extnormal15{
+  @include customExtNormal(15);
+}
 @mixin extnormal16{
   @include customExtNormal(16);
 }

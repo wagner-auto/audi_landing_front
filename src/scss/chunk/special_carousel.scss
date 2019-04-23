@@ -44,3 +44,33 @@
 .carousel__button{
   width: 80%;
 }
+.owl-counter{
+  @include extnormal15;
+  span{
+    @include extnormal15;
+    color:#737373;
+  }
+}
+.special_block__carousel-counter{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-top: 25px;
+}
+.icon-counter{
+  display: block;
+  width: 6px;
+  height:13px;
+  margin:0 10px;
+  background: url("/img/arrow.png");
+  cursor: pointer;
+  margin-top: 2px;
+  &.owl-next{
+    transform: rotate(180deg);
+  }
+}
+@media all and (max-width: 1650px){
+  .special_block__carousel__description,.special_block__carousel__price{
+    padding: 0px;
+  }
+}
