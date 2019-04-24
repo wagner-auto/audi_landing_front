@@ -37,3 +37,30 @@
 .header_logo_right{
   align-items: flex-end;
 }
+
+@include media-breakpoint-down($mobile_version){
+  .header__address{
+    display: none;
+  }
+  .header__small{
+    display: none;
+  }
+  .header__content{
+    display: grid;
+    padding: 0 15px;
+    grid-template-areas: "logo_left logo_right"
+  "contact logo_right";
+  }
+  .header_logo_left{
+    grid-area: logo_left;
+  }
+  .header__phone{
+    grid-area:contact;
+  }
+  .header_logo_right{
+    grid-area:logo_right;
+  }
+  .header__item-phone{
+    margin-left: 35px;
+  }
+}

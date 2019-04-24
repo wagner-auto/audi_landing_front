@@ -1,15 +1,16 @@
 @include font-face("AudiTEBold","../fonts/AudiTEBold/AudiType-ExtendedBold");
 @include font-face("AudiTENormal","../fonts/AudiTENormal/AudiType-ExtendedNormal");
 @include font-face("AudiTNormal","../fonts/AudiTNormal/AudiType-Normal");
-.main__container{
-  padding: 0 50px;
-}
+
 a {
   text-decoration: none;
   color:#000;
   &:hover{
     color:$audi_red;
   }
+}
+.main__container{
+  padding: 0 50px;
 }
 .btn{
   @include normal15;
@@ -34,4 +35,16 @@ a {
 }
 .none{
   display: none;
+}
+.tippy-popper{
+  @include normal12;
+}
+@include media-breakpoint-down($mobile_version){
+  .row, div[class^="col"]{
+    padding: 0;
+  }
+  .main__container,.container{
+    padding:0 15px;
+  }
+
 }
