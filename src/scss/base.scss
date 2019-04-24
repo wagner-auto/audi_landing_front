@@ -33,6 +33,7 @@ a {
   background-color: #000;
   color: #fff;
 }
+
 .none{
   display: none;
 }
@@ -45,6 +46,15 @@ a {
   }
   .main__container,.container{
     padding:0 15px;
+  }
+  .btn-mobile-black{
+    background-color: #000;
+    color: #fff;
+  }
+  .btn{
+    font-size: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
   }
 
 }
