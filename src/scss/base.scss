@@ -4,9 +4,12 @@
 .main__container{
   padding: 0 50px;
 }
-a{
+a {
   text-decoration: none;
   color:#000;
+  &:hover{
+    color:$audi_red;
+  }
 }
 .btn{
   @include normal15;

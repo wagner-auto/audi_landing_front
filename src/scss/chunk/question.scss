@@ -9,5 +9,26 @@
 }
 .question__text{
   @include normal16;
+  margin-top:0px;
   margin-bottom: 40px;
+}
+.question__pl{
+  margin-top:50px;
+}
+.question__pl__item{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  img{
+    width: 50px;
+    height: 50px;
+  }
+  &:not(:last-child){
+    border-right: 1px solid #d5d9d8;
+  }
+}
+.question__pl__text{
+  margin-top:10px;
+  @include extbold13;
 }

@@ -38,6 +38,9 @@
 @mixin extnormal16{
   @include customExtNormal(16);
 }
+@mixin extnormal19{
+  @include customExtNormal(19);
+}
 @mixin extnormal22{
   @include customExtNormal(22);
 }
@@ -47,6 +50,9 @@
 /**
  * BOLD
  */
+@mixin extbold13{
+  @include customExtBold(13);
+}
 @mixin extbold16{
   @include customExtBold(16);
 }

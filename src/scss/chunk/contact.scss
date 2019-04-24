@@ -1,0 +1,58 @@
+.contact{
+  margin:60px 0 100px;
+}
+.contact_head{
+  @include extbold30;
+  margin:0;
+  .red{
+    @include extbold30;
+    color:$audi_red;
+  }
+}
+.contact_subhead{
+  @include extnormal19;
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.contact__icon::before{
+  display: inline-block;
+  vertical-align: middle;
+  margin-right:10px;
+  float: left;
+}
+.contact__promo,.contact__address,.contact__phone{
+  display: block;
+}
+.contact__address{
+  @include normal16;
+  margin-bottom: 50px;
+  line-height: 1.5;
+  &::before{
+    content:url("/img/poi-small.png")
+  }
+}
+.contact__phone{
+  @include extnormal22;
+  margin-bottom: 10px;
+  &::before{
+    content: url("/img/phone_big.png");
+  }
+}
+.contact__promo{
+  @include normal16;
+  margin-left: 20px;
+}
+.contact__button-group{
+  margin-top: 63px;
+}
+.contact__button__container{
+  .btn{
+    width: 100%;
+  }
+}
+.contact__right{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
