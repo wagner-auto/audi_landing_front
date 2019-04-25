@@ -52,6 +52,7 @@
   }
   .preference{
     padding: 15px 0;
+    background: none;
   }
   .inline__header-h{
     font-size: 16px;
@@ -64,8 +65,13 @@
   }
   .preference__text-head{
     font-size: 16px;
+    color: #000;
   }
   .preference__icon{
     font-size: 12px;
+    color:#000;
+    &::before{
+      filter:invert(1);
+    }
   }
 }

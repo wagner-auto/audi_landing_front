@@ -1,6 +1,7 @@
 require("./timer");
 require("./carousel")
 require("./select");
+import "@fancyapps/fancybox";
 import tippy from "tippy.js";
 tippy(".icon__question",{
     arrow:true,

@@ -46,6 +46,10 @@ a {
 .mobile{
   display: none;
 }
+.center{
+  display: block;
+  margin: 0 auto;
+}
 @include media-breakpoint-down($mobile_version){
   .mobile{
     display: initial;

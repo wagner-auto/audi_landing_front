@@ -58,8 +58,35 @@
                     </ul>
                 </div>
                 <div class="item__button">
-                    <button class="btn btn-black button__finnal">Получить финальные условия</button>
-                    <button class="btn btn-white-border button__select">Выбрать</button>
+                    <button data-src="#callback" data-fancybox  class="btn btn-black button__finnal">Получить финальные условия</button>
+                    <button data-src="#callback" data-fancybox  class="btn btn-white-border button__select">Выбрать</button>
+                </div>
+            </div>
+            <% }) %>
+        </div>
+        <div class="showcase__cars">
+            <% [0,1,2,3,4,5,6,7,8].forEach(_=>{ %>
+            <div class="showcase__car__item">
+                <div class="item__head">
+                        <h4 class="item__head-header">Audi Q5</h4>
+                        <span class="item__head-header-text">От 2 690 000 рублей</span>
+                </div>
+                <div class="item__image">
+                    <img src="/img/car_a8.png"/>
+                </div>
+                <div class="item__list">
+                    <ul class="showcase__item__list">
+                        <li>35 TFSI 150 л. с. S tronic</li>
+                        <li><strong>Мощность</strong> 110 кВт (150 л. с.)</li>
+                        <li>Бонус до 400 000 рублей<i class="icon icon__question" data-tippy-content="Срок действия специального предложения до 31 марта."></i></li>
+                        <li>Бонус 80 000 рублей по программе Трейд-ин<i class="icon icon__question" data-tippy-content="Срок действия специального предложения до 31 марта."></i></li>
+                        <li>Кредитная ставка 7% <i class="icon icon__question" data-tippy-content="Срок действия специального предложения до 31 марта."></i></li>
+                        <li><strong>4 года гарантии</strong></li>
+                    </ul>
+                </div>
+                <div class="item__button">
+                    <button data-src="#callback" data-fancybox class="btn btn-black button__finnal">Получить финальные условия</button>
+                    <button data-src="#callback" data-fancybox class="btn btn-white-border button__select">Выбрать</button>
                 </div>
             </div>
             <% }) %>

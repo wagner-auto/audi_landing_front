@@ -1,0 +1,35 @@
+.modal{
+  display: none;
+  width:40%;
+}
+.modal__content{
+  max-width: 400px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.modal__head,.modal__text{
+  text-align: center;
+}
+.modal__head{
+  @include extbold22;
+  margin-bottom: 20px;
+}
+.modal__text{
+  @include normal16;
+}
+@include media-breakpoint-down($mobile_version){
+  .modal{
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+  }
+  .modal__head{
+    @include extbold16;
+  }
+  .modal__text{
+    @include normal12;
+  }
+}

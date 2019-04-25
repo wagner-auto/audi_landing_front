@@ -6,7 +6,7 @@
             <img src="/img/rings_wh.png" class="banner__disclaimer-rings"/>
             <h1 class="banner__disclaimer-text">Безупречные условия на покупку Audi</h1>
         </div>
-        <button class="btn btn-white banner__btn btn-mobile-black">Получить спецпредложение</button>
+        <button data-src="#callback" data-fancybox class="btn btn-white banner__btn btn-mobile-black">Получить спецпредложение</button>
     </div>
 </section>
 <section class="cars_in_stock">
@@ -32,6 +32,7 @@
 <%= _.template(require('./../includes/contact.html'))({}) %>
 
 <%= _.template(require('./../includes/footer.html'))({}) %>
+<%= _.template(require('./../includes/modal.html'))({}) %>
 <%= _.template(require('./../includes/script.html'))({}) %>
 </body>
 </html>
