@@ -95,15 +95,30 @@
   @include normal21;
 }
 
+@include media-breakpoint-down($mobile_version){
+  .cars_in_stock{
+    padding: 32px 0;
+  }
+  .cars_in_stock__head{
+    @include extbold16;
+    text-align: center;
+  }
+  .cars_in_stock__count{
+    @include extbold34;
+  }
+  .cars_in_stock__text{
+    @include normal15;
+  }
+  .cars_in_stock__img{
+    max-width: 40px;
+  }
+}
+
 /**
  * Специальное предложение
  */
 .special_block {
   padding-bottom: 36px;
-}
-
-.gray_block {
-  background-color: $audi_second_gray;
 }
 
 .special_block__text {
@@ -123,6 +138,22 @@
 
 .special_block__carousel {
   margin-top: 45px;
+}
+
+@include media-breakpoint-down($mobile_version){
+  .special_block__head{
+    @include extbold16;
+    text-align: center;
+  }
+  .special_block__text{
+    display: inline-block;
+    @include normal12;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  .special_block__timer_text{
+    @include extbold14;
+  }
 }
 
 @import "chunk/car/special_carousel";

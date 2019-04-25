@@ -53,6 +53,9 @@
 @mixin extbold13{
   @include customExtBold(13);
 }
+@mixin extbold14{
+  @include customExtBold(14);
+}
 @mixin extbold16{
   @include customExtBold(16);
 }
@@ -70,6 +73,9 @@
 }
 @mixin extbold30{
   @include customExtBold(30);
+}
+@mixin extbold34{
+  @include customExtBold(34);
 }
 @mixin extbold48{
   @include customExtBold(48);

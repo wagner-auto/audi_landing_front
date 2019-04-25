@@ -23,14 +23,14 @@ function createTimer(elem) {
     var delta = getdateend - currentDate;
     switch (format) {
         case "d":
-            createSVG(elem,".timer__item.d",[allDate,delta]);
+            createSVG(elem, ".timer__item.d", [allDate, delta]);
             break;
         case "dh":
-            var getHour=Math.round(delta/3600/1000%24);
-            var text_for_day_timer=[getDays(Math.ceil(delta / 3600 / 1000 / 24)),daysNamed(Math.ceil(delta / 3600 / 1000 / 24))]
-            createSVG(elem,".timer__item.d",[allDate,delta],text_for_day_timer);
-            var text_for_hour_timer=[getHours(getHour),hourNamed(getHour)];
-            createSVG(elem,".timer__item.h",[24-getHour,getHour],text_for_hour_timer);
+            var getHour = Math.floor(delta / 3600 / 1000 % 24);
+            var text_for_day_timer = [getDays(Math.floor(delta / 3600 / 1000 / 24)), daysNamed(Math.floor(delta / 3600 / 1000 / 24))]
+            createSVG(elem, ".timer__item.d", [allDate, delta], text_for_day_timer);
+            var text_for_hour_timer = [getHours(getHour), hourNamed(getHour)];
+            createSVG(elem, ".timer__item.h", [24 - getHour, getHour], text_for_hour_timer);
             break;
 
     }
@@ -43,10 +43,10 @@ function createTimer(elem) {
  * @param data
  * @param text
  */
-function createSVG(selector,elem, data, text) {
-    var width = 122,
-        height = 122,
-        radius = Math.min(width, height) / 2;
+function createSVG(selector, elem, data, text) {
+    var width, height;
+    width = height = window.innerWidth > 1199.98 ? 122 : 70;
+    var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal()
         .range(["#fff", "#090909"]);
 
@@ -89,17 +89,20 @@ function createSVG(selector,elem, data, text) {
     //Добавление текста
     var days = text[0];
     var set_text_days = text[1];
+    var font_size_time=window.innerWidth > 1199.98 ? 48 : 17;
+    var font_size_text=window.innerWidth > 1199.98 ? 16 : 9;
     circle.append("text")
         .text(days)
         .attr("class", "time")
         .attr("text-anchor", "middle")
         .attr("dx", 0)
-        .attr("font-size", 48);
+        .attr("font-size", font_size_time);
+    var text_dy=window.innerWidth > 1199.98 ? 20:10;
     circle.append("text")
-        .attr("font-size", 16)
+        .attr("font-size", font_size_text)
         .attr("class", "text")
         .attr("dx", radius - radius / 0.82)
-        .attr("dy", 20)
+        .attr("dy", text_dy)
         .text(set_text_days);
 }
 
@@ -126,16 +129,18 @@ function daysNamed(date) {
 function getDays(formul) {
     return formul >= 0 ? formul : 0;
 }
+
 function hourNamed(hour) {
-    if([2,3,4,22,23].indexOf(hour)!==-1){
+    if ([2, 3, 4, 22, 23].indexOf(hour) !== -1) {
         return "часа";
-    } else if(hour>4 && hour<=20 || hour===0){
+    } else if (hour > 4 && hour <= 20 || hour === 0) {
         return "часов";
     } else {
         return "час";
     }
 }
+
 function getHours(f) {
-    return f>=0?f:0;
+    return f >= 0 ? f : 0;
 
 }

@@ -19,3 +19,14 @@ text.text{
   @include normal16;
   fill:#fff;
 }
+@include media-breakpoint-down($mobile_version){
+  .timer_wrapper{
+    align-items: center;
+  }
+  text.time{
+    font-size: 17px;
+  }
+  text.text{
+    font-size: 9px;
+  }
+}
