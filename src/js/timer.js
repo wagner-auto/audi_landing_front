@@ -45,7 +45,7 @@ function createTimer(elem) {
  */
 function createSVG(selector, elem, data, text) {
     var width, height;
-    width = height = window.innerWidth > 1199.98 ? 122 : 70;
+    width = height = window.innerWidth > 1199.98 ? 122 : 80;
     var radius = Math.min(width, height) / 2;
     var color = d3.scaleOrdinal()
         .range(["#fff", "#090909"]);

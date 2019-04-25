@@ -32,3 +32,16 @@
   margin-top:10px;
   @include extbold13;
 }
+@include media-breakpoint-down($mobile_version){
+  .question__left_block{
+    img{
+      max-width: 100%;
+    }
+  }
+  .question__text{
+    font-size: 12px;
+  }
+  .question__pl{
+    display: none;
+  }
+}

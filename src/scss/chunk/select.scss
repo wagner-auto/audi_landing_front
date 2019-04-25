@@ -1,0 +1,92 @@
+@import "~select2/dist/css/select2.min.css";
+
+.select2-container--default {
+  &.select2-container--open {
+    .select2-selection--single {
+      //Стрелка
+      .select2-selection__arrow {
+        height: 100%;
+        right: 5px;
+
+        b {
+          border-color: transparent transparent $audi_gray;
+          color: $audi_gray;
+          border-width: 0px 5px 6px;
+        }
+      }
+    }
+  }
+
+  .select2-selection--single {
+    border-radius: 0px;
+    border: none;
+    border-bottom: $audi_gray 1px solid;
+
+    //Стрелка
+    .select2-selection__arrow {
+      height: 100%;
+      right: 5px;
+
+      b {
+        border-color: $audi_gray transparent transparent;
+        color: $audi_gray;
+        border-width: 6px 5px 0;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    height: auto;
+    padding: 3px 10px 3px;
+
+    .select2-selection__rendered {
+      @include normal12;
+      color: $audi_gray;
+
+
+    }
+  }
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected] {
+  background-color: #ededed;
+  @include select2__item;
+}
+
+.select2-container--open .select2-dropdown--below {
+  border-color: $audi_gray;
+}
+
+.select2-results__option {
+  @include select2__item;
+}
+
+.main-content__nav-select {
+  display: none;
+
+  + .select2-container {
+    display: none;
+  }
+}
+
+@include media-breakpoint-down($mobile_version) {
+  .main-content_select__container {
+    padding: 0 28px;
+
+    .select2-container {
+      width: 100% !important;
+    }
+
+    margin-bottom: 20px;
+  }
+  .main-content__nav-select {
+    width: 100%;
+
+    + .select2-container {
+      display: inline-block;
+    }
+  }
+
+}

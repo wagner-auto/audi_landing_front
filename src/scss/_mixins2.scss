@@ -83,3 +83,10 @@
 @mixin extbold56{
   @include customExtBold(56);
 }
+
+@mixin select2__item {
+  @include normal16;
+  color: #000000;
+  padding: 5px 10px;
+}
+

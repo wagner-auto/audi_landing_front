@@ -56,3 +56,37 @@
   justify-content: center;
   align-items: center;
 }
+@include media-breakpoint-down($mobile_version){
+  .contact{
+    margin-bottom: 30px;
+  }
+  .contact__right{
+    display: none;
+  }
+  .contact_head{
+    font-size: 21px;
+    .red{
+      font-size: inherit;
+    }
+  }
+  .contact_subhead{
+    font-size: 14px;
+  }
+  .contact__address,.contact__promo{
+    font-size: 12px;
+  }
+  .contact__address,.contact__promo,.contact_subhead{
+    margin-bottom: 30px;
+  }
+  .contact__phone{
+    font-size: 16px;
+  }
+  .contact__button-group{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .contact__button__container{
+    flex-basis: 48%;
+  }
+}

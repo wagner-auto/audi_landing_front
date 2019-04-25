@@ -20,10 +20,10 @@
   a{
     @include normal14;
     color: #a1a1a1;
-    &.active{
-      color: #000000;
-      border-bottom: 2px solid black;
-    }
+  }
+  &.active a{
+    color: #000000;
+    border-bottom: 2px solid black;
   }
 }
 .showcase__cars{
@@ -122,5 +122,74 @@
 @media all and (min-width: 1600px){
   .showcase__item{
     flex-basis: 23%;
+  }
+}
+@include media-breakpoint-down($mobile_version){
+  .showcase{
+    padding-top: 30px;
+  }
+  .showcase__head-header{
+    font-size: 16px;
+  }
+  .showcase__head-text{
+    font-size: 12px;
+  }
+  div.showcase__head-right{
+    margin-top: 15px;
+  }
+  .showcase__model_in_stock{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .showcase__model__list{
+    display: block;
+    padding: 20px 0;
+    flex-basis: 50%;
+  }
+  .audi__select{
+    width: 100%;
+  }
+  .showcase__model-item{
+    display: none;
+    &.active{
+      font-size: 12px;
+      display: initial;
+    }
+  }
+  .showcase__cars{
+    flex-direction: column;
+  }
+  .showcase__item{
+    flex-basis: 100%;
+    padding: 0;
+    .item__head-left{
+      flex-basis: 65%;
+    }
+    .item__head-header{
+      font-size: 16px;
+      strong{
+        font-size: inherit;
+      }
+    }
+    .item__head-header-text{
+      font-size: 12px;
+    }
+    .item__head-right{
+      flex-basis: 35%;
+    }
+    .showcase__item__list{
+      li{
+        font-size: 12px;
+        strong{
+          font-size: inherit;
+        }
+      }
+    }
+    .item__button{
+      .button__finnal{
+        padding: 12px 0;
+      }
+    }
   }
 }

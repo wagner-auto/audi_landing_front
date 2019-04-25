@@ -74,3 +74,48 @@
     padding: 0px;
   }
 }
+@include media-breakpoint-down($mobile_version){
+  .carousel__item{
+    margin: 0px 5px;
+  }
+  div.special_block__carousel__description, div.special_block__carousel__price{
+    padding: 0 10px;
+  }
+  .carousel__maker_name{
+    font-size: 16px;
+    strong{
+      font-size: inherit;
+    }
+  }
+  .carousel__promo{
+    font-size: 12px;
+    .red{
+      font-size: 13px;
+    }
+  }
+  .carousel__warranty{
+    font-size: 13px;
+  }
+  .carousel__del-price{
+    font-size: 12px;
+  }
+  .carousel__price{
+    font-size: 21px;
+    span{
+      font-size: 16px;
+    }
+  }
+  .carousel__button{
+    display: block;
+    margin: 0 auto 10px;
+  }
+  .special_block__carousel-counter{
+    margin-top: 17px;
+  }
+  .owl-counter{
+    font-size: 12px;
+    span{
+      font-size: inherit;
+    }
+  }
+}

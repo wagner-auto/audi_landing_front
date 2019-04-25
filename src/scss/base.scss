@@ -43,7 +43,13 @@ a {
 .gray_block {
   background-color: $audi_second_gray;
 }
+.mobile{
+  display: none;
+}
 @include media-breakpoint-down($mobile_version){
+  .mobile{
+    display: initial;
+  }
   .row, div[class^="col"]{
     padding: 0;
     margin: 0;

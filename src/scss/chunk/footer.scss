@@ -29,3 +29,18 @@
   color: #fff;
   margin: 0;
 }
+@include media-breakpoint-down($mobile_version){
+  .footer__disclaimer-text{
+    max-width: 100%;
+    font-size: 12px;
+  }
+  .footer__disclaimer-right{
+    justify-content: flex-start;
+  }
+  .footer__disclaimer{
+    padding: 25px 0;
+  }
+  .footer__copyright-text{
+    font-size: 12px;
+  }
+}
