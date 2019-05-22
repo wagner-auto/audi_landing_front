@@ -13,7 +13,7 @@
   position: absolute;
   top: 60px;
   left: 60px;
-  max-width: 50%;
+  max-width: 57%
 }
 
 .banner__disclaimer-rings {
@@ -22,15 +22,30 @@
 
 .banner__disclaimer-text {
   @include extbold56;
+     margin-top: 0;
   color: #fff;
 }
 
 .banner__btn {
   position: absolute;
-  bottom: 45px;
+  top:490px;
   left: 60px;
+  &:hover{
+    background-color: #fff;
+    color:#bb0a30;
+  }
 }
-
+@media all and (max-width:1800px){
+    .banner__btn{
+        top:400px;
+    }
+}
+@media all and (max-width:1400px){
+  .banner__btn{
+    top:360px;
+    left:40px
+  }
+}
 @include media-breakpoint-down($mobile_version) {
   .banner__disclaimer {
     top: 10px;
@@ -119,6 +134,10 @@
  */
 .special_block {
   padding-bottom: 36px;
+  & > .main__container > .row{
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 
 .special_block__text {

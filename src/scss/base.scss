@@ -5,10 +5,24 @@
 a {
   text-decoration: none;
   color:#000;
+  cursor: pointer;
   &:hover{
     color:$audi_red;
   }
 }
+
+.animated {
+    -webkit-animation-duration: .6s;
+    -o-animation-duration: .6s;
+    -moz-animation-duration: .6s;
+    animation-duration: 1.5s;
+
+    -webkit-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
 .main__container{
   padding: 0 50px;
 }
@@ -18,12 +32,17 @@ a {
   border:none;
   background-color: #fff;
   padding: 20px 28px;
+  transition: background-color ease-in .3s;
 }
 
 .btn-white{
   color:#010101;
   background-color: #ffffff;
   border:none;
+  &:hover{
+        color:#fff;
+    background-color: #000;
+  }
 }
 .btn-white-border{
   border:1px solid #000;
@@ -32,6 +51,10 @@ a {
 .btn-black{
   background-color: #000;
   color: #fff;
+  &:hover{
+        color:#fff;
+    background-color: #bb0a30;
+  }
 }
 
 .none{
@@ -50,6 +73,33 @@ a {
   display: block;
   margin: 0 auto;
 }
+.w100{
+  width:100%;
+}
+@media all and (max-width: 1400px) {
+
+    .banner__disclaimer{
+        top:20px;
+        max-width:70%;
+    }
+
+    .banner__btn{
+        top:180px;
+    }
+
+    .button__finnal,.button__select{
+        font-size: 13px;
+    }
+
+    .btn {
+        padding: 20px 9px;
+    }
+
+    .preference__image img{
+        max-width: 100%;
+    }
+}
+
 @include media-breakpoint-down($mobile_version){
   .mobile{
     display: initial;
@@ -66,7 +116,7 @@ a {
     color: #fff;
   }
   .btn{
-    font-size: 12px;
+    font-size: 13px;
     padding-top: 12px;
     padding-bottom: 12px;
   }

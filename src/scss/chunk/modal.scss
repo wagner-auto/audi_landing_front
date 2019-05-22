@@ -19,7 +19,13 @@
 }
 .modal__text{
   @include normal16;
+  text-align: left;
 }
+
+.modal__text-content{
+    width: 60%;
+}
+
 @include media-breakpoint-down($mobile_version){
   .modal{
     width: 100%;

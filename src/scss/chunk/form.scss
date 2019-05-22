@@ -17,12 +17,18 @@ input[type=text],input[type=tel]{
 label{
   @include normal12;
   display: block;
+  a{
+    color: $audi_red;
+  }
 }
 input[type=checkbox]{
-  visibility: hidden;
-  width: 0;
-  height: 0;
+    position: absolute;
+    visibility: visible;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
 }
+
 input[type=checkbox] + label{
   display: inline-block;
   &::before{

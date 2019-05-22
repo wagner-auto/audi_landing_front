@@ -46,7 +46,9 @@
   margin-top: 63px;
 }
 .contact__button__container{
+  display: flex;
   .btn{
+    text-align: center;
     width: 100%;
   }
 }
@@ -55,13 +57,22 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  & > div{
+    width: 500px;
+    height:400px;
+  }
 }
 @include media-breakpoint-down($mobile_version){
   .contact{
     margin-bottom: 30px;
   }
   .contact__right{
-    display: none;
+    display: block;
+    & > div{
+      margin-top:20px;
+      width:100%;
+      height:400px;
+    }
   }
   .contact_head{
     font-size: 21px;

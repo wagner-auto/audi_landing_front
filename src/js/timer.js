@@ -4,10 +4,17 @@ import * as d3 from "d3";
 initTimer();
 
 function initTimer() {
-    var wrapper = document.querySelectorAll(".timer_wrapper");
-    Array.from(wrapper).forEach(function (item) {
-        createTimer(item);
-    })
+    $(window).on("scroll", function initTimerScroll() {
+        var special_block = $(".special_block").position().top;
+        var position = $(this).scrollTop() + window.innerHeight - 300;
+        if (position > special_block) {
+            var wrapper = document.querySelectorAll(".timer_wrapper");
+            Array.from(wrapper).forEach(function (item) {
+                createTimer(item);
+            });
+            $(window).off("scroll", initTimerScroll);
+        }
+    });
 }
 
 /**
@@ -76,9 +83,21 @@ function createSVG(selector, elem, data, text) {
 
     //Добавление внешнего круга
     g.append("path")
-        .attr("d", arc)
+        //.attr("d", arc)
         .style("fill", function (d) {
             return color(d.data);
+        })
+        .transition()
+        .delay(function (d, i) {
+            return i * 500;
+        })
+        .duration(5000)
+        .attrTween('d', function (d) {
+            var i = d3.interpolate(d.startAngle + 0.1, d.endAngle);
+            return function (t) {
+                d.endAngle = i(t);
+                return arc(d)
+            }
         });
     var circle = svg.append("g");
     circle.append("circle")

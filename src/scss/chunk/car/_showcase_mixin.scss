@@ -5,18 +5,26 @@
   flex-basis: 30%;
   margin: 15px;
   padding: 22px 28px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 0px 0px 0px rgba(0,0,0,0.75);
+  transition: box-shadow ease-in-out .5s;
+  &:hover{
+    box-shadow: 4px 6px 5px 3px rgba(0,0,0,0.75);
+  }
   >div{
     margin-bottom: 10px;
   }
   .item__head-header{
     @include extnormal22;
-    margin: 0;
+    margin: 0 0 15px 0;
     strong{
       @include extbold22;
     }
   }
   .item__head-header-text{
     @include extbold16;
+    color:$audi_red;
   }
   .item__image{
     width: 100%;
@@ -30,7 +38,7 @@
     padding-left: 15px;
     li{
       @include normal16;
-      line-height: 1.5;
+      line-height: 2;
       strong{
         @include extbold16;
       }
@@ -58,6 +66,7 @@
       font-size: 12px;
     }
     .showcase__item__list{
+      margin-bottom: 0px;
       li{
         font-size: 12px;
         strong{
